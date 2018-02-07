@@ -2,5 +2,5 @@
 
 ### LOGIN
    Aplicação finalizada e rodando
- <img src="https://github.com/rafaelcarvalhocaetano/React/blob/master/login/src/component/print.png" style="width: 300px;
-    height: 300px;"/>
+ <img src="https://github.com/rafaelcarvalhocaetano/React/blob/master/login/src/component/print.png" style="width: 200px;
+    height: 200px;"/>

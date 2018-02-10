@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
 
 class App extends Component {
   render() {
     return (
-     <div class="container">
-     <h1>Ola</h1>
-     <button class="btn btn-primary">ola</button>
+      <div className="row">
+        <div className="col-sm-12">
+          <Navbar/>
+        </div>
      </div>
     );
   }

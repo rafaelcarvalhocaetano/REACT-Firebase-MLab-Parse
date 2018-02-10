@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+import firebase from '../assets/f1.png';
+
+import '../components/Navbar.css';
+
 class Navbar extends Component {
 
 
@@ -7,22 +11,20 @@ class Navbar extends Component {
         return (
             
   <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <img src={(firebase)}/>
 
     <ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li>
-</ul>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">GitHub</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Create Account</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+        </li>
+    </ul>
+
   </nav>
 
         );

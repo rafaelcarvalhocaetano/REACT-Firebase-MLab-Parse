@@ -3,3 +3,7 @@ img{
     height: 2em;
     border-radius: 10px;
 }
+.container{
+    padding: 10% 5% 0 5%;
+    text-align: justify;
+}

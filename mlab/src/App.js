@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+import { PainelGrid } from './components/PainelGrid';
 
 class App extends Component {
   render() {
     return (
-      <div className="row">
-        <div className="col-sm-12">
+      <div>
+       
           <Navbar/>
-        </div>
+     
      </div>
     );
   }

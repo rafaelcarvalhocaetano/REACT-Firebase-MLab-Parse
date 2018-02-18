@@ -1,8 +1,14 @@
 # react
 
 ### INSTALAÇÃO
- ` npm install firebase --save`
- ` import * as firebase from "firebase"; ` 
+Criando a aplicaço com react com o seguinte comando: `create-react-app nome-aplicação`.
+Instalaço do firebase no react.
+ ```
+ npm install firebase --save
+ ```
+ ```
+ import * as firebase from "firebase"; 
+ ``` 
  ```
  // Initialize Firebase
 // TODO: Replace with your project's customized code snippet

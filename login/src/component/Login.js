@@ -17,11 +17,11 @@ export default class Login extends Component {
         
     this.config = {
             apiKey: "AIzaSyAReJEJx28tyjkvlKC3SpINd5j3hKojHS0",
-            authDomain: "react-auth-3ddd7.firebaseapp.com",
-            databaseURL: "https://react-auth-3ddd7.firebaseio.com",
-            projectId: "react-auth-3ddd7",
-            storageBucket: "react-auth-3ddd7.appspot.com",
-            messagingSenderId: "523276128635"
+            authDomain: "react-auth-3234234ddd7.firebaseapp.com",
+            databaseURL: "https://react-auth-3d09ije1735e4323dd7.firebaseio.com",
+            projectId: "react-auth-3d23232323232321212wewe23dd7",
+            storageBucket: "react-auth-3dewe123t65467870987654324234545676gfre333dd7.appspot.com",
+            messagingSenderId: "5232761343232123123w56789028635"
           };
 
           this.state = {

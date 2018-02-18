@@ -19,9 +19,12 @@ export class Navbar extends Component {
     constructor(props) {
 
         super(props);
-        this.autenticacao = this.autenticacao.bind(this);
+        this.loginGoogle = this.loginGoogle.bind(this);
         this.componentDidMount = this.componentDidMount.bind(this);
-        this.logar = this.logar.bind(this);
+        
+        this.loginGitHub = this.loginGitHub.bind(this);
+        this.loginEmailSimple = this.loginEmailSimple.bind(this);
+        this.loginFaceBook = this.loginFaceBook.bind(this);
        
         this.config = {
             apiKey: "AIzaSyA2Bu5Hi5UdzUyIWqGTFLMEhBuGnAUA_uY",
@@ -31,24 +34,41 @@ export class Navbar extends Component {
             storageBucket: "crud-react-2c03c.appspot.com",
             messagingSenderId: "1078928272096"
         };
-
         this.state = {
             user: undefined
         }
-
     }
 
     componentDidMount() {
         firebase.initializeApp(this.config);
         this.auth = firebase.auth();
+
+        firebase.auth().onAuthStateChanged((signedUser) => {
+            if (signedUser) {
+              // User is signed in.
+              this.setState({
+                user: signedUser
+              });
+              console.log('Incluindo no localStorage')
+              //Não é necessário incluir no localStorage
+              //pois a plataforma do Firebase já inclui.
+              //localStorage.setItem('firebase_auth', this.state.user);
+            } else {
+              console.log('The user has been logged out');
+              this.setState({
+                user: undefined
+              });
+              //Não é necessário incluir no localStorage
+              //pois a plataforma do Firebase já inclui.
+              //localStorage.removeItem('firebase_auth');
+            }
+          }); 
     }
 
-    autenticacao() {
+    loginGoogle() {
         firebase.auth().languageCode = 'pt';
         this.provider = new firebase.auth.GoogleAuthProvider();
 
-        
-        
         firebase.auth().signInWithPopup(this.provider)
             .then((result) => {
                console.log('ok');
@@ -58,17 +78,42 @@ export class Navbar extends Component {
                 console.log('erro',e);
                 this.props.history.push('/login');
             })
+    }
+    loginEmailSimple(event){
+        event.preventDefault();
 
-       
+        firebase.auth().createUserWithEmailAndPassword(this.refs.email.value, this.refs.password.value)
+        .then((user) => {
+            this.props.history.push('/home');
+        })
+        .catch(function(error) {
+            console.log('erro aqui -- ',error);
+          });
 
     }
-    logar() {
 
+    loginGitHub(){
+        this.provider = new firebase.auth.GithubAuthProvider();
+
+        firebase.auth().signInWithPopup(this.provider)
+        .then((result) => {
+            this.props.history.push('/home');
+          })
+          .catch((error) => {
+           console.log('erro', error);
+          });
     }
-    
 
-   
-   
+    loginFaceBook(){
+        this.provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(this.provider)
+        .then(user => {
+            this.props.history.push('/home');
+        })
+        .catch(function(error) {
+           console.log('erro');
+        });
+    }
 
 
     render() {
@@ -92,6 +137,7 @@ export class Navbar extends Component {
                                 type="password" name="password" ref="password" />
                             <small id="password" className="form-text text-muted">Informe sua password.</small>
                         </div>
+                        
                         <button type="submit" className="btn btn-primary container" onClick={this.logar}>Login</button>
                         <button type="submit" className="btn btn-success container bb" onClick={
                             this.autenticacao

@@ -122,7 +122,7 @@ export class Navbar extends Component {
             <div>
                 <App />
                 <div className="box">
-                    <i className="fas fa-fire fa-7x img"></i>
+                    <i className="fas fa-fire fa-5x img"></i>
 
                     <form onSubmit={this.autenticacao} className="form-horizontal">
                         <div className="form-group">
@@ -138,10 +138,10 @@ export class Navbar extends Component {
                             <small id="password" className="form-text text-muted">Informe sua password.</small>
                         </div>
                         
-                        <button type="submit" className="btn btn-primary container" onClick={this.logar}>Login</button>
-                        <button type="submit" className="btn btn-success container bb" onClick={
-                            this.autenticacao
-                            }>Cadastrar</button>
+                        <button type="button" className="btn btn-success container aa" onClick={this.loginEmailSimple}> <i className="far fa-envelope"></i>     Login </button>
+                        <button type="submit" className="btn btn-secondary container bb" onClick={this.loginFaceBook}><i className="fab fa-facebook-f"></i>     Facebook</button>
+                        <button type="submit" className="btn btn-secondary container cc" onClick={this.loginGitHub}><i className="fab fa-github"></i>           GIthub</button>
+                        <button type="submit" className="btn btn-secondary container dd" onClick={this.loginGoogle }><i className="fab fa-google"></i>          Google</button>
                     </form>
                 </div>
             </div>

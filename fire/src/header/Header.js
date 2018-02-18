@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Login from '../components/Login';
 
 import * as firebase from "firebase";
+
+import { Link } from 'react-router-dom';
 
 export class Header extends Component {
 
@@ -42,14 +43,14 @@ export class Header extends Component {
         return (
             <div>
                 <nav className="navbar navbar-light bg-light">
-                    <a className="navbar-brand" href="#">
+                    <Link className="navbar-brand" to="/home">
                         <i className="fas fa-user-circle"></i>
                         <h1>{this.uidUSER.user}</h1>
                        
-                    </a>
+                    </Link>
                     <ul className="nav justify-content-end">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Sing Out</a>
+                            <Link className="nav-link" to="/home">Sing Out</Link>
                         </li>
                     </ul>
                 </nav>

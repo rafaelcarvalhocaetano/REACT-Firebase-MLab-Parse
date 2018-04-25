@@ -10,15 +10,15 @@ export class Menu extends Component {
 
             <nav className="navbar navbar-inverse bg-inverse">
                 <Link className="navbar-brand" to="/">
-                    <i className="fa fa-calendar-check-o"></i> Todo
+                    <i className="fa fa-calendar-check-o"></i> Cursos
                     </Link>
                 <div className="navbar-collapse collapse" id="navbar">
                     <ul className="nav navbar-nav">
                         <li>
-                            <Link to="/todos" replace>Todo</Link>
+                            <Link to="/todos" replace>Lista de Curso</Link>
                         </li>
                         <li>
-                            <Link to="/about">About</Link>
+                            <Link to="/about">Sobre</Link>
                         </li>
                     </ul>
 

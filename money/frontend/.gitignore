@@ -1,0 +1,4 @@
+node_modules
+*.log
+
+parei no Dependencia do template (adminLTE)

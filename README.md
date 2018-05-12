@@ -37,4 +37,4 @@ firebase.initializeApp(config);
 
 ### My MONEY
 
-Aplicação financeira com mongoDB, React, Axios, Webpack.
+Aplicação financeira com webpack, react, axios, mongodb e bootstrap.

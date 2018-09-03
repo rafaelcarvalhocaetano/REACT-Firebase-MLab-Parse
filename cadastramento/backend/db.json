@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nome": "Rafael Carvalho 1",
+      "email": "r1@gmail.com"
+    },
+    {
+      "id": 2,
+      "nome": "Rafael Carvalho 2",
+      "email": "r2@gmail.com"
+    },
+    {
+      "id": 3,
+      "nome": "Rafael Carvalho 3",
+      "email": "r3@gmail.com"
+    },
+    {
+      "id": 4,
+      "nome": "Rafael Carvalho 4",
+      "email": "r4@gmail.com"
+    },
+    {
+      "nome": "Rafael Carvalho Caetano",
+      "email": "rapha.pse@outlook.com",
+      "id": 5
+    }
+  ]
+}

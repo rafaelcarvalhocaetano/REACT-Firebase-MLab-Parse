@@ -1,6 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const element = <h1>PKG-1</h1>
+import App from "./component/App";
+import { BoaNoite, BoaTarde } from "./component/Multiple";
+import SaudacaoClass from "./component/SaudacaoClass";
+import Father from "./component/Father";
 
-ReactDOM.render(element, document.getElementById('root'));
+
+// const element = <h1>PKG-1</h1>
+
+ReactDOM.render(
+  <div>
+    <Father nome="Rafael" snome="Carvalho Caetano"/>
+  </div>,
+
+  document.getElementById("root")
+);
